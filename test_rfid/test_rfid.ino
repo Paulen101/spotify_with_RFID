@@ -4,6 +4,7 @@
 #define SS_PIN 10
 #define RST_PIN 9
 
+
 MFRC522 mfrc522(SS_PIN, RST_PIN);
 
 void setup() {
@@ -13,6 +14,10 @@ void setup() {
 }
 
 void loop() {
+  checkRFID();
+}
+
+void checkRFID() {
   if (mfrc522.PICC_IsNewCardPresent() && mfrc522.PICC_ReadCardSerial()) {
     String cardID = "";
     for (byte i = 0; i < mfrc522.uid.size; i++) {
