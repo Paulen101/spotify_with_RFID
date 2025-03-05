@@ -29,7 +29,7 @@ In addition to the RFID reader, this project utilizes an Arduino microcontroller
 ### Setup Steps for Arduino
 
 1. **Hardware Setup:**  
-   Connect the RFID reader to the Arduino following the wiring diagram provided by your RFID module’s documentation.
+   Connect the RFID reader to the Arduino following the wiring diagram provided by your RFID module’s documentation. [Last Minute Engineering](https://lastminuteengineers.com/how-rfid-works-rc522-arduino-tutorial/)
 
 2. **Arduino Code:**  
    Upload the provided Arduino sketch (located in the `arduino` folder) to your Arduino board. This sketch reads RFID tags and sends the tag data over serial communication to the connected computer.
