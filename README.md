@@ -99,7 +99,7 @@ Run the included tests to verify your setup:
       python test_api.py
 
 - ### RFID Tests: 
-    Check the `test_rfid` folder for additional test scripts that help ensure your RFID hardware is correctly intergrated. The tests ensure that the RFID reader is correctly capturing the RFID card's ID. Make sure you get the correct ID from your card, so that you can implement it in your Python code. When running the Python code, you no longer need to open the serial port on the Arduino IDE manually - just connect the RFID scanner to your device. __Note:__ The device ID configured in your Python script must match the one to which the RFID scanner is connected; otherwise, the integration will not work.
+    Check the `test_rfid` folder for additional test scripts that help ensure your RFID hardware is correctly intergrated. These tests ensure that the RFID reader correctly captures the RFID card's ID. Make sure you get the correct ID from your RFID card. After scanning, the application will trigger playback on the device specified by the device ID in your Python code. You no longer need the RFID scanner to be physically connected to that playback device; simply connect the scanner to your computer and configure the correct port in your code. This way, playback can occur on any device (e.g., your phone or tablet) as long as its device ID is correctly set.
 
 ## Future Improvement
 This project is under active development. Future updates may includes:
@@ -108,7 +108,7 @@ This project is under active development. Future updates may includes:
 - Expanded mapping options for RFID tags
 - Improved error handling and user feedback
 - __Integration with Apple Music:__ Expanding the platform support to include Apple Music
-- __Wireless Operation:__ Transitioning to a wireless solution so that the RFID scanner does not need to be physically connected to your computer. Instead, the scanner will operate with a normal power supply, allowing greater flexibility in placement and usage.
+- __Wireless Operation:__ Transitioning to a wireless solution so that the RFID scanner doesn't need to be physically connected to your computer. Instead, the scanner will operate on a normal power supply, while your Python code directs playback to the device specified in the configuration.
 
 ## Contributing 
 
