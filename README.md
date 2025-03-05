@@ -49,7 +49,7 @@ In addition to the RFID reader, this project utilizes an Arduino microcontroller
 - **RFID Hardware:**  
   An RFID reader and tags are required to fully test the RFID functionality.
 - **Spotify Developer Account:**  
-  Create a Spotify Developer account to obtain your Client ID, Client Secret, and Redirect URI.
+  Create a Spotify Developer account to obtain your Client ID, Client Secret, and Redirect URI. You can sign in by using your default Spotify account.  
 
 ### Setup Steps
 
@@ -82,6 +82,38 @@ In addition to the RFID reader, this project utilizes an Arduino microcontroller
       SPOTIFY_CLIENT_SECRET = 'your_client_secret'
       SPOTIFY_REDIRECT_URI = 'your_redirect_uri'
      ```
-       
+
+## Usage
+After setting up your environment and configuring your credentials, run the main application with:
+
+```bash
+  python main.py
+```
+The application will wait for RFID tag scans (received via the Arduino) and then perform the associated spotify action. Modify the mapping of RFID tags to action as needed for your project.
+
+## Testing
+Run the included tests to verify your setup:
+
+- ### API Tests:
+
+      python test_api.py
+
+- ### RFID Tests: 
+    Check the `test_rfid` folder for additional test scripts that help ensure your RFID hardware is correctly intergrated. The tests ensure that the RFID reader is correctly capturing the RFID card's ID. Make sure you get the correct ID from your card, so that you can implement it in your Python code. When running the Python code, you no longer need to open the serial port on the Arduino IDE manually - just connect the RFID scanner to your device. __Note:__ The device ID configured in your Python script must match the one to which the RFID scanner is connected; otherwise, the integration will not work.
+
+## Future Improvement
+This project is under active development. Future updates may includes:
+- Enhanced scanning functionality
+- Additional Arduino and sensor integration
+- Expanded mapping options for RFID tags
+- Improved error handling and user feedback
+- __Integration with Apple Music:__ Expanding the platform support to include Apple Music
+- __Wireless Operation:__ Transitioning to a wireless solution so that the RFID scanner does not need to be physically connected to your computer. Instead, the scanner will operate with a normal power supply, allowing greater flexibility in placement and usage.
+
+## Contributing 
+
+Contributions are welcome! If you have any ideas for improvements or additional features, please feel free to open an issue or submit a pull request.
+        
+    
 
 
